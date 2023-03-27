@@ -7,3 +7,5 @@ dependencies:
   - pip=20.3.3
   - pip:
       - wandb==0.10.21
+      - protobuf==3.19.0
+      - numpy==1.20.0
