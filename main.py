@@ -1,13 +1,12 @@
 import mlflow
 import os
 import hydra
-from omegaconf import DictConfig, OmegaConf
+from omegaconf import DictConfig, OmegaConf, listconfig
 
 
 # This automatically reads in the configuration
 @hydra.main(config_name='config')
 def go(config: DictConfig):
-
     # Setup the wandb experiment. All runs will be grouped under this name
     os.environ["WANDB_PROJECT"] = config["main"]["project_name"]
     os.environ["WANDB_RUN_GROUP"] = config["main"]["experiment_name"]
@@ -20,7 +19,7 @@ def go(config: DictConfig):
         # This was passed on the command line as a comma-separated list of steps
         steps_to_execute = config["main"]["execute_steps"].split(",")
     else:
-        assert isinstance(config["main"]["execute_steps"], list)
+        assert isinstance(config["main"]["execute_steps"], listconfig.ListConfig)
         steps_to_execute = config["main"]["execute_steps"]
 
     # Download step
@@ -51,7 +50,7 @@ def go(config: DictConfig):
         )
 
     if "check_data" in steps_to_execute:
-        # no output here
+        # no output here / kolomorov-smirnov test (non-parametric)
 
         _ = mlflow.run(
             os.path.join(root_path, "check_data"),
