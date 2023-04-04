@@ -56,7 +56,7 @@ def go(config: DictConfig):
             os.path.join(root_path, "check_data"),
             "main",
             parameters={
-                "sample_artifact": "preprocessed_data.csv",
+                "sample_artifact": "preprocessed_data.csv:latest",
                 "reference_artifact": config["data"]["reference_dataset"],
                 "ks_alpha": config["data"]["ks_alpha"]
             },
