@@ -56,7 +56,7 @@ def go(config: DictConfig):
             os.path.join(root_path, "check_data"),
             "main",
             parameters={
-                "sample_artifact": "preprocessed_data.csv",
+                "sample_artifact": "preprocessed_data.csv:latest",
                 "reference_artifact": config["data"]["reference_dataset"],
                 "ks_alpha": config["data"]["ks_alpha"]
             },
@@ -88,7 +88,7 @@ def go(config: DictConfig):
             os.path.join(root_path, "random_forest"),
             "main",
             parameters={
-                "input_artifact": "data_train.csv:latest",
+                "train_data": "data_train.csv:latest",
                 "model_config": model_config,
                 "export_artifact": config["random_forest_pipeline"]["export_artifact"],
                 "random_seed": config["main"]["random_seed"],
