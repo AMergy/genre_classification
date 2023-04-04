@@ -13,7 +13,7 @@ The model was evaluating using a test set from the dataset, with an AUC (Area Un
 
  <!-- Images -->
 
-<p align="center">
-  <img src="figures/feature_importance_0_f1fd3194294f7a484f72.png" width="300" align="left" />
-  <img src="figures/confusion_matrix_0_f02dfbea4d35c8b2f32b.png" width="300" align="right" />
+<p float="left">
+  <img src="figures/feature_importance_0_f1fd3194294f7a484f72.png" width="300" />
+  <img src="figures/confusion_matrix_0_f02dfbea4d35c8b2f32b.png" width="300" />
 </p>
