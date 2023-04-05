@@ -9,7 +9,7 @@ We use a Random Forest to perform songs' genre classification (NLP).
 
 ## Results
 
-The model was evaluating using a test set from the dataset, with an AUC (Area Under the Curve) of 0.95326. The following figures show the feature importances and the confusion matrix computed during the evaluation step: 
+The model was evaluated using a test set from the dataset, with an AUC (Area Under the Curve) of 0.95326. The following figures show the feature importances and the confusion matrix computed during the evaluation step: 
 
  <!-- Images -->
 
