@@ -17,3 +17,16 @@ The model was evaluated using a test set from the dataset, with an AUC (Area Und
   <img src="figures/feature_importance_0_f1fd3194294f7a484f72.png" width="300" />
   <img src="figures/confusion_matrix_0_f02dfbea4d35c8b2f32b.png" width="300" />
 </p>
+
+## Pipeline
+
+You can use this pipeline at version 1.0.0 with mlflow and w&b (you need to be logged in: `wandb login`):
+```
+mlflow run -v 1.0.0 git@github.com:AMergy/genre_classification.git
+```
+for instance:
+```
+mlflow run git@github.com:AMergy/genre_classification.git \ 
+             -v 1.0.0 \
+             -P hydra_options="main.project_name=remote_execution"
+```
