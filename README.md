@@ -24,3 +24,9 @@ You can use this pipeline at version 1.0.0 with mlflow and w&b (you need to be l
 ```
 mlflow run -v 1.0.0 git@github.com:AMergy/genre_classification.git
 ```
+for instance:
+```
+mlflow run git@github.com:AMergy/genre_classification.git \ 
+             -v 1.0.0 \
+             -P hydra_options="main.project_name=remote_execution"
+```
