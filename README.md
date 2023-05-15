@@ -26,7 +26,7 @@ mlflow run -v 1.0.0 git@github.com:AMergy/genre_classification.git
 ```
 for instance:
 ```
-mlflow run git@github.com:AMergy/genre_classification.git \ 
+mlflow run https://github.com/AMergy/genre_classification.git \ 
              -v 1.0.0 \
              -P hydra_options="main.project_name=remote_execution"
 ```
